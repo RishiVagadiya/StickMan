@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" package="com.Zoozo.CrowedColor">
+  <!-- इंटरनेट परमिशन (Unity खुद भी डालता है, इसलिए हटाना बेहतर है अगर डुप्लिकेट हो) -->
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <application android:allowBackup="true" android:supportsRtl="true" android:theme="@style/UnityThemeSelector" android:hardwareAccelerated="true" android:label="@string/app_name" tools:replace="android:theme">
+    <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-6801434645272696~3530189072" />
+    <!-- Unity Player Activity -->
+    <activity android:name="com.unity3d.player.UnityPlayerActivity" android:hardwareAccelerated="false" android:launchMode="singleTask" android:screenOrientation="portrait">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+      <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
+    </activity>
+    <!-- Unity Ads Initialization -->
+    <meta-data android:name="unityads.appId" android:value="5838022" />
+    <!-- Unity Ads Activities -->
+    <activity android:name="com.unity3d.ads.adunit.AdUnitActivity" android:hardwareAccelerated="true" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+  </application>
+</manifest>
